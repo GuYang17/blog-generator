@@ -10,4 +10,6 @@ The result will be in `./output/`
 
 You can run `./launch_server.sh` to have a quick look after finishing building.
 
+Some information like your name can be modified in the top of the file generator.py.
+
 That's all!
