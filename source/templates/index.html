@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }}'s Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="welcome-title">Hello! Welcome to my Blog!</h1>
+
+    <div class="blog-list-container">
+        {% for article in articles %}
+            <div class="blog-item">
+                <h2 class="blog-title">{{ article.title }}</h2>
+                <p class="blog-time">{{ article.date.strftime('%Y-%m-%d') }}</p>
+                <div class="blog-button-wrapper">
+                    <a href="{{ article.link }}" class="blog-link-button">Read This</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

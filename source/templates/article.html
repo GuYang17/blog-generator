@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ article.title }}</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blog-area">
+        <h1 class="article-title">{{ article.title }}</h1>
+        <p class="article-time">{{ article.date.strftime('%Y-%m-%d') }}</p>
+        <div class="article-content">
+            {{ article.result_html | safe }}
+        </div>
+        <a href="index.html" class="back-link">Back to Index</a>
+    </div>
+</body>
+</html>
